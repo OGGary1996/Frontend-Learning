@@ -1,0 +1,10 @@
+div{
+    width:80%;
+    height: 80%;
+    margin:20px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}

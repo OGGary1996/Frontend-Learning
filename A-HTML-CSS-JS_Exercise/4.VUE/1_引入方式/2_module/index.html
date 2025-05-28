@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module</title>
+    <script type="module" src="./style.js" defer></script>
+</head>
+<body>
+
+<div id="container">
+    <h3>{{message1}}</h3>
+    <h3>{{message2}}</h3>
+</div>
+
+<!--或者使用内联的形式直接写JS-->
+<!--<script type="module">-->
+<!--    import {createApp} from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'-->
+<!--    const app = createApp({-->
+<!--        data() {-->
+<!--            return {-->
+<!--                message1: 'Hello Vue!',-->
+<!--                message2: 'Using Module',-->
+<!--            }-->
+<!--        }-->
+<!--    })-->
+<!--    app.mount('#container')-->
+<!--</script>-->
+
+</body>
+</html>

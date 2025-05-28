@@ -1,0 +1,19 @@
+/*后代选择器 id=container1 后代中所有的p标签*/
+#container1 p{
+    background-color:lightcoral;
+}
+
+/*子选择器 .menu直接子代中的所有li*/
+#container3 .menu>li {
+    background-color: lightgreen;
+}
+
+/*相邻兄弟选择器 #container4中的.menu中的Lists3中的3-2*/
+#container4 .menu .subMenu #li1 + li{
+    background-color: green;
+}
+
+/*通用兄弟选择器 #container4中的.menu中的Lists3中的3-2和3-3*/
+#container5 .menu .subMenu #li3-1 ~ li{
+    background-color: blue;
+}

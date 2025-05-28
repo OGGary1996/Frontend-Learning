@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层级选择器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h3>This is the exercise of selector</h3>
+    <hr>
+</header>
+
+<main>
+    <div id="container1">
+        <p>P1</p>
+        <p>P2</p>
+        <p>P3</p>
+        <div id="container2">
+            <p>P4
+                <ul>
+                    <li>Li1</li>
+                    <li>Li2</li>
+                    <li>Li3</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <p>P5</p>
+    <hr>
+
+    <div id="container3">
+        <ul class="menu">Menu
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3
+                <ul>
+                    <li>List3-1</li>
+                    <li>List3-2</li>
+                    <li>List3-3</li>
+                </ul>
+            </li>
+            <li>List4</li>
+        </ul>
+    </div>
+    <hr>
+
+    <div id="container4">
+        <ul class="menu">Menu
+            <li>List1</li>
+            <li>List2</li>
+            <li>Lists 3
+                <ul class="subMenu">
+                    <li id="li1">List3-1</li>
+                    <li id="li2">List3-2</li>
+                    <li id="li3">List3-3</li>
+                </ul>
+            </li>
+            <li>List4</li>
+        </ul>
+    </div>
+    <hr>
+
+    <div id="container5">
+        <ul class="menu">Menu
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3
+                <ul class="subMenu">
+                    <li id="li3-1">List3-1</li>
+                    <li id="li3-2">List3-2</li>
+                    <li id="li3-3">List3-3</li>
+                </ul>
+            </li>
+            <li>List4</li>
+        </ul>
+    </div>
+</main>
+</body>
+</html>

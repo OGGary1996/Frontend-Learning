@@ -1,0 +1,73 @@
+*{
+    /*设置边框盒模型*/
+    box-sizing: border-box;
+}
+
+/*设置item的信息*/
+#container1 p{
+    /*设置大小*/
+    width: 100px;
+    height: 100px;
+    /*设置背景颜色*/
+    background-color: lightpink;
+    /*设置边距信息*/
+    margin:10px;
+    border: 2px solid black;
+    padding: 30px;
+    /*设置文本颜色*/
+    color: blue;
+    text-align: center;
+}
+#container2 p{
+    /*设置大小*/
+    width: 100px;
+    height: 100px;
+    /*设置背景颜色*/
+    background-color: lightpink;
+    /*设置边距信息*/
+    margin:10px;
+    border: 2px solid black;
+    padding: 30px;
+    /*设置文本颜色*/
+    color: blue;
+    text-align: center;
+}
+
+/*设置container的信息*/
+#container1{
+    width: 600px;
+    height: 400px;
+    background-color: lightgreen;
+    /*设置边距信息*/
+    margin:15px;
+    border:5px solid blue;
+    padding: 5px;
+    /*设置容器的显示模式*/
+    display: flex;
+    /*设置容器的对齐方向，默认是row*/
+    flex-direction: row;
+    /*设置子项在容器中的对齐方式*/
+    align-items: center;
+    /*设置网格在容器中的对其方式*/
+    justify-content: space-between;
+}
+#container2{
+    width: 800px;
+    height: 800px;
+    background-color: lightgreen;
+    /*设置边距信息*/
+    margin:15px;
+    border:5px solid blue;
+    padding: 20px;
+    /*设置容器的显示模式*/
+    display: grid;
+    /*设置行列信息*/
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /*设置gap间隙*/
+    column-gap:20px;
+    row-gap:10px;
+    /*设置item在网格中的对其方式*/
+    justify-items: center;
+    align-items: center;
+}

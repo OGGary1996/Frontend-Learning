@@ -1,0 +1,22 @@
+/*表格居中*/
+main{
+    display:flex;
+    justify-content:center;
+}
+/*调整边框样式和表格大小*/
+table{
+    border:1px solid lightgray;
+    /*border-collapse:collapse;*/
+    width:60%;
+}
+/*调整边框样式、文字居中、单元格高度*/
+th,td{
+    border:1px solid lightgray;
+    text-align:center;
+    height:30px;
+}
+
+/*给偶数单元格其他的颜色*/
+table tr:nth-child(even){
+    background-color: lightgray;
+}

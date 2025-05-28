@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+
+<script>
+    // 函数定义的三种方式：
+    // 1. 函数声明，可以先调用再声明
+    console.log(sayHello()); // 先调用后声明
+    function sayHello(){
+        return 'Hello World';
+    }
+    // 2.函数表达式，创建匿名函数，将函数赋值给变量，然后通过变量调用
+    const sayHi = function(){
+        return 'Hi from anonymous function';
+    }
+    console.log(sayHi());
+    // 3. 箭头函数，简化函数表达式的语法
+    const sayHiArrow = () => {
+        return 'Hi from arrow function';
+    }
+    console.log(sayHiArrow());
+        // 箭头函数的简写，适用于只有一个参数和一个表达式的情况
+    let name = 'John';
+    const printName = name => 'Name: ' + name;
+    console.log(printName(name));
+
+    // 函数参数
+    // 传递参数的个数不限制
+    const greetUser = (name,age) => {
+        return 'Hello ' + name + ', you are ' + age + ' years old.';
+    }
+    console.log(greetUser('Gary')); // 只传入一个参数, 第二个参数为undefined
+    // 默认参数形式
+    const greet = (name = 'Gary') => 'Welcome: ' + name;
+    console.log(greet()); // 没有传入参数，使用默认值
+
+    // 函数的一等公民性质
+    // 函数可以作为参数传递给其他函数
+    const operation_add = (a,b) => a + b;
+    const operation_sub = (a,b) => a - b;
+    const calculate = (operation,a,b) => operation(a,b); // 传入函数作为参数
+    console.log(calculate(operation_add,3,5));
+    console.log(calculate(operation_sub,3,5));
+    // 函数可以作为返回值
+    const createMultiplier = (number) => {
+        return function(times){ // 返回一个匿名函数
+            return number*times;
+        }
+    }
+    console.log(createMultiplier(2)(3)); // 首选传递2，返回一个匿名函数，然后使用参数3调用返回的函数
+    // 使用链式编程，使得函数立即执行 IIFE
+    (function() {
+        console.log('This is an IIFE');
+    })();
+
+</script>
+
+</body>
+</html>

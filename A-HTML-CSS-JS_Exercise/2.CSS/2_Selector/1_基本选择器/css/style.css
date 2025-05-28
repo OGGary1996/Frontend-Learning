@@ -1,0 +1,41 @@
+/*通配符选择器*/
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*标签选择器*/
+h1{
+    color: blueviolet;
+    font-size: 40px;
+    background-color: lightblue;
+}
+
+/*类选择器*/
+.l2title{
+    background-color:cadetblue;
+    font-size: 30px;
+}
+.l3title{
+    background-color: darkcyan;
+    font-size: 20px;
+}
+.highlight{
+    background-color: yellow;
+}
+
+/*id选择器*/
+#title-1{
+    font-family:monospace;
+}
+#title-2{
+    font-family: cursive;
+}
+
+/*组合选择器*/
+.box.intro.highlight{
+    font-style: oblique;
+    font-size: 20px;
+}
+

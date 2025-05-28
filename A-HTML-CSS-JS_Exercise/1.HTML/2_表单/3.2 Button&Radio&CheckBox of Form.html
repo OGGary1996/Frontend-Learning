@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button, Radio, Check Box exercise</title>
+</head>
+<body>
+<header>
+    <h2>This is an exercise about Button, Radio, and Check Box of Form</h2>
+    <hr>
+</header>
+
+<main>
+    <section>
+    <h3>Button</h3>
+        <form action="#" method = "post">
+            <label for="username">Username:</label>
+            <input type="text" id = "username" name = "username"
+                   placeholder = "Enter your name here..." maxlength = "30" minlength = "10" required>
+            <label for="password">Password:</label>
+            <br><br>
+            <input type="password" id = "password" name = "password"
+                   placeholder="Enter your password here..." maxlength = "30" minlength = "10" required>
+            <br><br>
+            <input type="submit" value = "Submit"> &nbsp;
+            <input type="reset" value = "Reset">
+        </form>
+        <br><br>
+        <button type = "button" onclick="alert('hello!')">ClickMe</button> &nbsp;
+        <input type="button" value = "Click Me!" onclick="alert('hello!')">
+    </section>
+    <br><br>
+
+    <section>
+    <h3>Radio Button</h3>
+        <form action="#" method = "post">
+            <p>Gender:</p>
+            <label for="Male">Male</label>
+            <input type="radio" id = "Male" name = "gender" value = "Male">
+            <br>
+            <label for="Female">Female</label>
+            <input type="radio" id = "Female" name = "gender" value = "Female">
+            <br><br>
+            <input type="submit" value = "Submit">
+            <input type="reset" value = "Reset">
+        </form>
+    </section>
+    <br><br>
+
+    <section>
+    <h3>Check Box</h3>
+        <form action="#" method="post">
+            <p>Skills:</p>
+            <label for = "Java">Java</label>
+            <input type="checkbox" id = "Java" name = "Skills" value = "Java" checked>
+            <label for="Database">Database</label>
+            <input type="checkbox" id = "Database" name = "Skills" value = "Database">
+            <label for="Frontend">Frontend</label>
+            <input type="checkbox" id = "Frontend" name = "Skills" value = "Frontend">
+            <br><br>
+            <input type="submit" value="Confirm">&nbsp;
+            <input type="reset" value="Reset">
+        </form>
+    </section>
+</main>
+
+</body>
+</html>

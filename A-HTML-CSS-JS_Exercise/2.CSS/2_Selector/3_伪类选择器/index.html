@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h2>This is exercise of Pseudo-classes</h2>
+    <hr>
+</header>
+
+<main>
+<section id="section1">
+    <h3>1. 交互性伪类</h3>
+    <p>
+    <a href="https://www.google.com" target = "_blank">Access Google</a>
+    <a href="https://www.youtube.com" target = "_blank">Access Youtube</a>
+    </p>
+    <form action="/submit">
+        <p>
+        <label for="username">Username:&nbsp;</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+        </p>
+        <label for="password">Password:&nbsp;</label>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <p><button type = "button" onclick=alert("Bro_do_you_even_code?")>Click Me!</button></p>
+    </form>
+</section>
+
+<section id="section2">
+    <h3>2. 结构性伪类</h3>
+    <p>Cars</p>
+    <ul>
+        <li class="japanese">Japanese
+            <ul>
+                <li>Toyota</li>
+                <li>Honda</li>
+                <li>Nissan</li>
+            </ul>
+        </li>
+        <li class="germany">Germany
+            <ul>
+                <li>BMW</li>
+                <li>Mercedes-Benz</li>
+                <li>Volkswagen</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section id="section3">
+    <h3>3. 状态性伪类</h3>
+    <p>
+    <form action="/submit">
+        <label for="username2">Username:&nbsp;</label>
+        <input type="text" id="username2" name="username" required>
+        <label for="email">Email:&nbsp;</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <p>Acknowledgement:&nbsp;</p>
+        <label for="1">1:</label>
+        <input type="checkbox" id="1" name="checkbox" value="1" checked>
+        <label for="2">2:</label>
+        <input type="checkbox" id="2" name="checkbox" value="2">
+    </form>
+    </p>
+</section>
+
+<section id="section4">
+    <h3>4. 否定伪类</h3>
+    <ul>
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</section>
+
+<section id="section5">
+    <h3>5. 综合练习</h3>
+    <h4>navigation:</h4>
+    <a href="http://www.google.com">Google</a>
+    <ul>
+        <li>project 1</li>
+        <li>project 2</li>
+        <li>project 3</li>
+        <li>project 4</li>
+        <li>project 5</li>
+    </ul>
+    <form action="/submit">
+        <label for="username3">Username:&nbsp;</label>
+        <input type="text" id="username3" name="username" placeholder="输入名字" required>
+        <label for="email2">Email:&nbsp;</label>
+        <input type="email" id="email2" name="email" placeholder="输入邮箱" required>
+        <label for="acknowledgement">同意协议</label>
+        <input type="checkbox" id="acknowledgement" name="acknowledgement" value="1" required>
+        <button type="submit" onclick="alert('提交成功')">提交</button>
+    </form>
+</section>
+</main>
+
+</body>
+</html>

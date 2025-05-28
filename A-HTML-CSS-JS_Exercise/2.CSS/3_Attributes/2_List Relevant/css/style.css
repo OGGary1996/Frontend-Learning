@@ -1,0 +1,46 @@
+/*1. 综合简写*/
+#list-1{
+    list-style:disc;
+}
+
+#list-1-1{
+    list-style:circle inside;
+}
+
+/*2. 具体列表属性*/
+#list-2 {
+    list-style-type: upper-roman;
+}
+#list-2-1 {
+    list-style-position: inside;
+    list-style-image: url(/resources/image/icon/check_icon.png);
+}
+
+/*3. 自定义列表标记*/
+/*去除格式*/
+.customized{
+    list-style:none;
+}
+/*自定义格式*/
+#list-3>li::before{
+    content: "👉";
+}
+#list-3-1 li::before{
+    content: "✅";
+}
+
+
+/*4. 定义列表*/
+dl {
+    border:1px solid rgba(204, 204, 204, 0.9);
+}
+dt {
+    font-weight:bold;
+    color:#333;
+    text-decoration: underline;
+}
+dd {
+    margin-left:20px;
+    color:#666;
+    font-style:italic;
+}

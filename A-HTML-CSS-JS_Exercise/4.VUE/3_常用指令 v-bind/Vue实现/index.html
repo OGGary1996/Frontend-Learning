@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <table>
+            <caption>Student List</caption>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Name</th>
+                    <th>Profile</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Major</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(student,index) in students" :key="student.name">
+                    <td>{{index + 1}}</td>
+                    <td>{{student.name}}</td>
+                    <td><img v-bind:src="student.profile" v-bind:alt="student.name"></td>
+                    <td>{{student.gender === 1 ? "Male" : "Female"}}</td>
+                    <td>{{student.age}}</td>
+                    <td>{{student.major}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的引入方式</title>
+    <link rel="stylesheet" href="./style.css">
+    <!--第三种方式-->
+    <script src="demo.js" defer></script>
+</head>
+<body>
+    <div class="box">
+        <!--第一种方式，直接写入标签-->
+        <button type="button" onclick=alert("Hello!")>Click ME</button>
+
+        <button type="button" onclick="sayHello()">Click Me</button>
+        <button type="button" onclick="printHello()">Click Me</button>
+    </div>
+
+    <!--第二种方式-->
+    <script>
+        function sayHello(){
+            alert("Hello from internal script!");
+        }
+    </script>
+</body>
+</html>

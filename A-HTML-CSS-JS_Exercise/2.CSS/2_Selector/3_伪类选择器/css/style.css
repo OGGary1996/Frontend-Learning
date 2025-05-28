@@ -1,0 +1,86 @@
+/*1. 交互性伪类*/
+/* 悬停链接变色*/
+#section1 a:hover{
+    background-color: chocolate;
+}
+/*未访问过的链接为蓝色*/
+#section1 a:link{
+    color: blue;
+}
+/*已访问过的链接为紫色*/
+#section1 a:visited{
+    color: purple;
+}
+/*进入文字框时，边界变粗变色*/
+#section1 input:focus{
+    border-color: blue;
+    border-width: 2px;
+}
+/*点击按钮时，变色*/
+#section1 button:active{
+    background-color: chocolate;
+}
+
+/*2. 结构性伪类*/
+/*li对应的父元素中的第一个子元素变色*/
+#section2 .japanese li:first-child{
+    background-color: lightpink;
+}
+/*li对应的父元素中的最后一个子元素变色*/
+#section2 .germany li:last-child{
+    background-color: lightpink;
+}
+/*li对应的父元素中的第n个子元素变色*/
+#section2 .japanese li:nth-child(2){
+    background-color: lightpink;
+}
+#section2 .germany li:nth-child(2){
+    background-color: lightpink;
+}
+
+
+/*3. 状态性伪类*/
+/*选中的复选框变色*/
+#section3 input:checked {
+    background-color: red;
+}
+/*必填项变色*/
+#section3 input:required {
+    border-color: red;
+}
+/*验证项目变色*/
+#section3 input:invalid {
+    background-color: pink;
+}
+
+/*4. 否定伪类*/
+/*不是第一个子元素的li变色*/
+#section4 li:not(.active) {
+    color: red;
+}
+
+/*5. 综合练习*/
+/*悬停链接变色*/
+#section5 a:hover {
+    background-color: chocolate;
+}
+/*点击按钮变色*/
+#section5 button:active {
+    background-color: gray;
+}
+/*列表中偶数选项变色*/
+#section5 li:nth-child(even) {
+    background-color: lightblue;
+}
+/*必填项边框加粗*/
+#section5 input:required {
+    border:2px solid red;
+}
+#section5 input:focus {
+    border:2px solid blue;
+}
+/*选中的选框边框加粗*/
+#section5 input:checked {
+    border:4px solid red;
+}
+

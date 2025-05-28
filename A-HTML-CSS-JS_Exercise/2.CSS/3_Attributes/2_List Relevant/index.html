@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Relevant Attributes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h3>This is exercise of list relevant attributes</h3>
+    <hr>
+</header>
+
+<main>
+    <p>List-1：综合简写</p>
+    <ul id="list-1">
+        <li>No.1</li>
+        <li>No.2
+            <ul id="list-1-1">
+                <li>No.2.1</li>
+                <li>No.2.2</li>
+            </ul>
+        </li>
+        <li>No.3</li>
+    </ul>
+
+    <p>List-2: 具体列表属性</p>
+    <ol id="list-2">
+        <li>No.1</li>
+        <li>No.2
+            <ul id="list-2-1">
+                <li>No.2.1</li>
+                <li>No.2.2</li>
+            </ul>
+        </li>
+        <li>No.3</li>
+    </ol>
+
+    <p>List-3: 自定义列表标记</p>
+    <ul id="list-3" class="customized">
+        <li>No.1</li>
+        <li>No.2
+            <ul id="list-3-1" class="customized">
+                <li>No.2.1</li>
+                <li>No.2.2</li>
+            </ul>
+        </li>
+        <li>No.3</li>
+    </ul>
+    <p>4. 定义列表</p>
+    <dl id="list-4">
+        <dt>HTML</dt>
+            <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+            <dd>层叠样式表</dd>
+        <dt>Javascript</dt>
+            <dd>脚本语言</dd>
+    </dl>
+
+</main>
+
+</body>
+</html>

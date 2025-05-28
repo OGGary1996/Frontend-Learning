@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+
+<div id="container">
+    <button type="button" v-on:click="getData()">Click to load data</button>
+    <table id="studentList">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Profile</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Major</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here -->
+            <tr v-for="(student,index) in students" :key="index">
+                <td>{{index + 1}}</td>
+                <td>{{student.name}}</td>
+                <td><img v-bind:src="student.profile" v-bind:alt="student.name"></td>
+                <td>{{student.gender === 1 ? "Male" : "Female"}}</td>
+                <td>{{student.age}}</td>
+                <td>
+                    <span v-if="student.major === 0">CS</span>
+                    <span v-else-if="student.major === 1">Math</span>
+                    <span v-else-if="student.major === 2">Physics</span>
+                    <span v-else-if="student.major === 3">Chemistry</span>
+                    <span v-else-if="student.major === 4">Biology</span>
+                    <span v-else-if="student.major === 5">History</span>
+                </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables&Datatype</title>
+</head>
+<body>
+
+<script>
+    // 变量的声明
+    // 1. var,不常用
+    var a = 10;
+    var b = 20;
+    a = "This is a string";
+    b = true; // boolean
+    // 2. let
+    let c = 100;
+    // 3. const
+    const d = 200;
+    // d = 300; 此时会报错，因为const声明的变量是常量，不能被重新赋值
+
+    // 数据类型
+    // 1. 基本数据类型：Number、String、Boolean、Undefined、Null、Symbol
+    // 2. 引用数据类型：Object、Array、Function
+    let e = 123;
+    let f = "Hello!";
+    let g = true;
+    let h;
+    let I = null;
+    let j = Symbol("symbol");
+    let k = {name: "John", age: 30}; // 对象
+    let l = [1, 2, 3, 4, 5]; // 数组
+    function sayHello(){
+        return "Hello from m!"
+    }
+    let m = sayHello; // m 的类型是函数
+    let n = function() { // 此时 n 的类型是一个 匿名函数
+        return "Hello from n!"
+    }
+    console.log(m()); // 调用m函数 "Hello!"
+    console.log(n()); // 调用n函数，输出 "Hello!"
+    // 3. typeof
+    console.log(typeof e, typeof f, typeof g, typeof h, typeof I, typeof j, typeof k, typeof l, typeof m, typeof n);
+
+    // 变量的作用域
+    // 1.全局作用域和局部作用域
+    let globalVar = "This is a global variable";
+    function test(){
+        console.log(globalVar); // 可以访问全局变量
+        let localVar = "This is a local variable";
+    }
+    test(); // 输出 "This is a global variable"
+    // console.log(localVar); // 报错，localVar 只能在 test 函数内访问
+
+    // 2. 块级作用域
+    if (true){
+        let blockVar_1 = "This is a block variable";
+        var blockVar_2 = "This is a block variable with var";
+        console.log(blockVar_1); // 输出 "This is a block variable"
+    }
+    // console.log(blockVar_1); // 报错，blockVar_1 只能在 if 块内访问
+    console.log(blockVar_2); // 输出 "This is a block variable with var"
+
+    // 3. 变量提升
+    console.log(x); // undefined
+    var x = 5; // 变量提升，x 在此处已经声明但未赋值
+    // console.log(y); // 报错，y 在此处未声明
+    // let y = 10; // y 在此处声明并赋值
+
+
+
+</script>
+</body>
+</html>

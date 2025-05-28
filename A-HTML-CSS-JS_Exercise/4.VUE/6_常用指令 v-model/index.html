@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+<div id="container">
+    <input v-model="score" type="text" id="test" placeholder="Type your score here">
+    <p v-if="100 > score >= 90">Excellent!</p>
+    <p v-else-if="score >= 80">Good!</p>
+    <p v-else-if="score >= 70">Average!</p>
+    <p v-else-if="score >= 60">Pass!</p>
+    <p v-else-if="0 < score < 60">Fail!</p>
+    <p v-else>Invalid score!</p>
+</div>
+
+</body>
+</html>

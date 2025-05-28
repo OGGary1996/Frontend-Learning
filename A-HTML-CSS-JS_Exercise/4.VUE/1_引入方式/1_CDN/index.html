@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CDN-VUE</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!--使用引入方式，引入JS-->
+    <script src="style.js" defer></script>
+</head>
+<body>
+<div id="container">
+    <h3>{{message1}}</h3>
+    <h3>{{message2}}</h3>
+</div>
+
+
+<!--或者使用内联的方式,直接编写JS-->
+<!--<script>-->
+<!--    const app=Vue.createApp({-->
+<!--        data(){-->
+<!--            return {-->
+<!--                message1:'Hello Vue!',-->
+<!--                message2:'Using CDN',-->
+<!--            }-->
+<!--        }-->
+<!--    })-->
+<!--    app.mount('#container')-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+/*将每个模型的大小控制为包含内边距与边框宽度*/
+*{
+    box-sizing:border-box;
+}
+
+.box1{
+    /*设置背景*/
+    background-image:linear-gradient(rgba(223, 11, 77, 0.9), rgba(117, 8, 232, 0.9));
+    /*设置边框*/
+    border:5px solid rgba(223, 181, 11, 0.9);
+    /*设置尺寸*/
+    width:300px;
+    height:150px;
+    /*设置边距*/
+    margin:10px;
+    padding:20px;
+}
+
+.box2 {
+    width:300px;
+    height:150px;
+    background: linear-gradient(45deg,black,white);
+    /*设置边距属性*/
+    margin:10px;
+    padding:20px;
+    border: 10px solid red;
+}
+
+/*边距折叠*/
+/*此时.para1和.para2之间的上下间隔为30 而不是 30+10*/
+.para1 {
+    background-color: lightblue;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.para2 {
+    background-color: lightgreen;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/*边距溢出*/
+.parent {
+    border:0.5px solid black;
+    background: lightblue;
+}
+.child {
+    background: blue;
+    margin-top:30px
+}
+/*解决边距溢出：
+1.使用padding替代margin，
+2. 父元素 overflow:hidden,
+3. 父元素增加border和padding的尺寸*/

@@ -1,0 +1,15 @@
+.container p {
+    color: gray;
+}
+
+.container>p {
+    font-weight: bold;
+}
+
+.container h5+p {
+    color: red;
+}
+
+.container p.highlight {
+    background-color: yellow;
+}

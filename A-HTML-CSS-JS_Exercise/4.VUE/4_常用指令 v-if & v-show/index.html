@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+
+<div id="container">
+    <div v-if="isShow" v-for="(profile,index) in profiles" :key="index">
+        <h6>{{"Kanye " + index+1}}</h6>
+        <img v-bind:src="profile.profile" alt="N/A">
+    </div>
+
+</div>
+
+<button type="button" v-on:click="toggle">Turn ON/OFF</button>
+
+</body>
+</html>

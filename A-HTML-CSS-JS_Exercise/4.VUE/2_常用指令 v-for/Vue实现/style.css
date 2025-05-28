@@ -1,0 +1,23 @@
+#container{
+    width:80%;
+    height:80vh;
+    margin:15px auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#student_list{
+    border:1px solid lightgray;
+    border-collapse:collapse;
+    width:60%;
+}
+
+th,td{
+    border:1px solid lightgray;
+    text-align:center;
+    height:30px;
+}
+tr:nth-child(even){
+    background-color: lightgray;
+}

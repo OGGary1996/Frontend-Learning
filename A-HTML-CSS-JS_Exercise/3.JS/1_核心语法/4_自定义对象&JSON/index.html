@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object</title>
+</head>
+<body>
+
+<script>
+    // 定义对象的四种方式：
+    // 1. 对象字面量
+    let student1 = {
+        name:'Gary',
+        age:28,
+        sayHi: function(){
+            return "Hello, my name is " + this.name + " and I'm " + this.age + " years old.";
+        }
+    }
+    console.log(student1.sayHi());
+    // 2. 使用工厂函数,适用于大批量创建同样结构的对象
+    function createStudent(name,age){
+        return {
+            name:name,
+            age:age,
+            sayHi: function(){
+                return "Hello, my name is " + this.name + " and I'm " + this.age + " years old.";
+            }
+        }
+    }
+    let student2 = createStudent('Zhang',28);
+    console.log(student2.sayHi());
+    // 3. 使用构造函数，将函数作为构造函数使用
+    function StudentConstructor(name,age){
+        this.name = name;
+        this.age = age;
+        this.sayHi = function(){
+            return "Hello, my name is " + this.name + " and I'm " + this.age + " years old.";
+        }
+    }
+    let student3 = new StudentConstructor('Tom',28);
+    console.log(student3.sayHi());
+    // 4. 使用ES6的class语法
+    class Student{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        sayHi(){
+            return "Hello, my name is " + this.name + " and I'm " + this.age + " years old.";
+        }
+    }
+    let student4 = new Student('Jerry',28);
+    console.log(student4.sayHi());
+
+    // 2.JSON
+    // JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于人阅读和编写，同时也易于机器解析和生成。
+    // JSON格式是基于JavaScript对象字面量的语法，但它是一个独立于语言的文本格式。
+    let info = '{"name":"Gary","age":28}';
+    // JSON.parse()方法将JSON字符串转换为JavaScript对象
+    let student5 = JSON.parse(info);
+    console.log(student5.name); // 输出: Gary
+    // JSON.stringify()方法将JavaScript对象转换为JSON字符串
+    let studentInfo = JSON.stringify(student5);
+
+</script>
+
+</body>
+</html>

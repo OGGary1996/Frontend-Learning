@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Tags Exercise</title>
+</head>
+<body>
+<h3 id="basic structure"> Basic Structure of Table </h3>
+<table border = "1">
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>City</td>
+    </tr>
+    <tr>
+        <td>Ke</td>
+        <td>28</td>
+        <td>Beijing</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>25</td>
+        <td>Shanghai</td>
+    </tr>
+</table>
+<hr>
+
+<h3 id="colspan and rowspan"> Colspan and Rowspan </h3>
+<table border = "1">
+    <tr>
+        <th colspan="3">Students Info</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>City</td>
+    </tr>
+    <tr>
+        <td>Ke</td>
+        <td>28</td>
+        <td>Beijing</td>
+    </tr>
+    <tr>
+        <td>Tom</td>
+        <td>25</td>
+        <td>Shanghai</td>
+    </tr>
+</table>
+<br/>
+<table border = "1">
+    <tr>
+        <th colspan="3">Students Score</th>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>Course</td>
+        <td>Score</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Ke</td>
+        <td>Java</td>
+        <td>99</td>
+    </tr>
+    <tr>
+        <td>Database</td>
+        <td>98</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Tom</td>
+        <td>Java</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>Database</td>
+        <td>99</td>
+    </tr>
+</table>
+<hr>
+
+<h3 id="table caption">表格的语意化标签</h3>
+<table border="1">
+    <caption><b>Students Score</b></caption>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td rowspan="2">Ke</td>
+        <td>Java</td>
+        <td>99</td>
+    </tr>
+    <tr>
+        <td>Database</td>
+        <td>98</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Tom</td>
+        <td>Java</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>Database</td>
+        <td>99</td>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2">Average:</td>
+        <td>98.5</td>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

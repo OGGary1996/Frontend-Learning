@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" type="module" defer></script>
+</head>
+<body>
+<header>
+    <div id="box1">
+        <h1>Student List</h1>
+    </div>
+</header>
+
+<main id="app">
+    <div id="search">
+        <div id="searchForm">
+            <form action="#" method="post">
+                <span>Search 👉</span>
+                <label for="studentName">Name:</label>
+                <input v-model="searchForm.name" type="text" id="studentName" name="name">
+                <label for="studentGender">Gender:</label>
+                <select v-model="searchForm.gender" name="gender" id="studentGender">
+                    <option value="" selected>Not Specify</option>
+                    <option value="1" >Male</option>
+                    <option value="0" >Female</option>
+                </select>
+                <label for="studentAge">Age:</label>
+                <input v-model="searchForm.age" type="text" id="studentAge" name="age">
+            </form>
+        </div>
+        <div id="buttons">
+            <input type="button" value="Clear" v-on:click="handleClear" id="clearBtn">
+        </div>
+    </div>
+
+    <div id="table">
+        <table>
+            <thead>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Profile</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Major</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(student,index) in filteredStudents" :key="index"
+                v-bind:style="{fontWeight: student.name === hoveredStudentName ? 'bold':'normal'}"
+                v-on:mouseenter="handleMouseEnter(student.name)"
+                v-on:mouseleave="handleMouseLeave">
+                <td>{{index+1}}</td>
+                <td>{{student.name}}</td>
+                <td><img v-bind:src="student.profile" v-bind:alt="student.name"></td>
+                <td>{{student.gender === 1 ? "Male":"Female"}}</td>
+                <td>{{student.age}}</td>
+                <td>
+                    <span v-if="student.major === 0">CS</span>
+                    <span v-else-if="student.major === 1">Math</span>
+                    <span v-else-if="student.major === 2">Physics</span>
+                    <span v-else-if="student.major === 3">Chemistry</span>
+                    <span v-else-if="student.major === 4">Biology</span>
+                    <span v-else-if="student.major === 5">English</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>

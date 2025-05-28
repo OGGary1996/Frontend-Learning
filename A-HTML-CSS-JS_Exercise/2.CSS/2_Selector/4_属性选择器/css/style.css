@@ -1,0 +1,28 @@
+/*所有带有href属性的a*/
+a[href]{
+    background-color: pink;
+}
+
+/*所有从外部打开的链接*/
+a[target="_blank"] {
+    color:blue;
+}
+
+/*所有https标签*/
+a[href^="https"] {
+    color:green;
+}
+
+/*所有包含了about的链接*/
+a[href*="about"] {
+    color:yellow;
+}
+
+/*所有jpg格式的图片*/
+img[src$=".jpg"] {
+    border: 1px solid red;
+}
+/*所有以png格式的图片*/
+img[src$=".png"] {
+    border: 1px solid green;
+}

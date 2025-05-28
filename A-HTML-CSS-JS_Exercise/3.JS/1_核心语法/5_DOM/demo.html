@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM demo</title>
+</head>
+<body>
+    <main>
+
+    </main>
+
+    <script>
+        // 创建一个p标签，和一个按钮DOM，并且插入到页面中
+        let p_label = document.createElement('p');
+        let button_label = document.createElement('button');
+        let main_label = document.querySelector('main');
+        main_label.appendChild(p_label);
+        main_label.appendChild(button_label);
+        // 设置p标签和button标签的内容
+        p_label.innerHTML = 'hello world';
+        button_label.innerHTML = 'Click Me';
+        // 添加事件监听,点击按钮时，改变p标签的内容
+        button_label.addEventListener('click', function () {
+            button_label.disabled = true;
+            p_label.innerHTML = 'You clicked me!';
+            p_label.style.color = 'red';
+        });
+
+    </script>
+</body>
+</html>

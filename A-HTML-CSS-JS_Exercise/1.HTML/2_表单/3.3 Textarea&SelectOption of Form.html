@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Textarea, select option exercise</title>
+</head>
+<body>
+
+<header>
+    <h2>This is exercise of Textarea select option of Form</h2>
+    <hr>
+</header>
+
+<main>
+    <section>
+        <h3>Textarea</h3>
+        <h4>1. Simple textarea</h4>
+        <form action="#" method = "post">
+            <label for="text_area">Message:</label>
+            <br><br>
+            <textarea id = "text_area" name = "message" rows = "10" cols = "30">
+            </textarea>
+        </form>
+
+        <h4>2. Textarea with more attributes</h4>
+        <form action="#" method = "post">
+            <label for="text_area2">Comment:</label>
+            <br><br>
+            <textarea name="message" id="text_area2"
+                      cols="30" rows="10"
+                      maxlength = "200" minlength="10"
+                      placeholder="Leave a comment...">
+            </textarea>
+        </form>
+    </section>
+    <hr>
+
+    <section>
+        <h3>下拉菜单</h3>
+        <h4>1.简单的下拉菜单</h4>
+        <form action="#" method = "post">
+            <label for="city">City:</label>&nbsp;
+            <select name="city" id="city">
+                <option value="Saskatoon" selected>Saskatoon</option>
+                <option value="Regina">Regina</option>
+                <option value="Prince Albert">Prince Albert</option>
+            </select>
+        </form>
+
+        <h4>2.支持多选的下拉菜单</h4>
+        <form action="#" method = "post">
+            <label for="fruits">Select fruits you want:</label>
+            <br><br>
+            <select name="fruits" id="fruits" multiple size="5" >
+                <option value = "apple">Apple</option>
+                <option value = "banana">Banana</option>
+                <option value = "orange">Orange</option>
+                <option value = "grape">Grape</option>
+                <option value = "peach">Peach</option>
+                <option value = "pear">Pear</option>
+            </select>
+        </form>
+
+        <h4>3.带分组的下拉菜单</h4>
+        <form action="#" method = "post">
+            <label for="car">Select Car you want</label>
+            <br><br>
+            <select name="car" id="car">
+                <optgroup label="Japan">
+                    <option value="toyota">Toyota</option>
+                    <option value="honda">Honda</option>
+                    <option value="nissan">Nissan</option>
+                </optgroup>
+                <optgroup label="Germany">
+                    <option value="audi">Audi</option>
+                    <option value="bmw">BMW</option>
+                    <option value="mercedes">Mercedes</option>
+                </optgroup>
+                <optgroup label="U.S.A">
+                    <option value="lincoln">Lincoln</option>
+                    <option value="ford">Ford</option>
+                    <option value="chevrolet">Chevrolet</option>
+                </optgroup>
+            </select>
+        </form>
+    </section>
+</main>
+<br><br><br><br>
+</body>
+</html>
