@@ -1,0 +1,39 @@
+{
+  "students": [
+    {
+      "name": "Gary",
+      "profile": "../../public/image/profile/IMG_1547.jpeg",
+      "gender": 1,
+      "age": 28,
+      "major": 0
+    },
+    {
+      "name": "Tom",
+      "profile": "../../public/image/profile/IMG_1548.JPG",
+      "gender": 1,
+      "age": 22,
+      "major": 1
+    },
+    {
+      "name": "Jerry",
+      "profile": "../../public/image/profile/IMG_1549.JPG",
+      "gender": 0,
+      "age": 25,
+      "major": 2
+    },
+    {
+      "name": "Alice",
+      "profile": "../../public/image/profile/IMG_1550.JPG",
+      "gender": 0,
+      "age": 30,
+      "major": 0
+    },
+    {
+      "name": "Bob",
+      "profile": "../../public/image/profile/IMG_1551.JPG",
+      "gender": 1,
+      "age": 27,
+      "major": 4
+    }
+  ]
+}
